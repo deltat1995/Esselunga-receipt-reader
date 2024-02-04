@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Receipt reader</title>
+  <script type="module" src="/main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <button id="import-image-button">Import Image</button>
+      <button id="import-pdf-button">Import PDF</button>
+    </div>
+    <form name="prod-price-splitter" id="prod-price-splitter" class="not_visible">
+      <div class="row">
+        <div class="column" style="min-width:350px">
+          <h3>Crop Products</h3>
+          <div class="image-wrapper">
+            <img id="products-img" alt="Products Preview">
+          </div>
+          <br>
+          <div class="field-row">
+            <label for="productsHeight">Height</label>
+            <input type="text" name="productsHeight" id="productsHeight">
+          </div>
+          <div class="field-row">
+            <label for="productsWidth">Width (450)</label>
+            <input type="text" name="productsWidth" id="productsWidth">
+          </div>
+          <div class="field-row">
+            <label for="productsX">X (70)</label>
+            <input type="text" name="productsX" id="productsX">
+          </div>
+          <div class="field-row">
+            <label for="productsY">Y (790)</label>
+            <input type="text" name="productsY" id="productsY">
+          </div>
+        </div>
+        <div class="column" style="min-width:350px">
+          <h3>Crop Prices</h3>
+          <div class="image-wrapper">
+            <img id="prices-img" alt="Prices Preview">
+          </div>
+          <br>
+          <div class="field-row">
+            <label for="pricesHeight">Height</label>
+            <input type="text" name="pricesHeight" id="pricesHeight">
+          </div>
+          <div class="field-row">
+            <label for="pricesWidth">Width (140)</label>
+            <input type="text" name="pricesWidth" id="pricesWidth">
+          </div>
+          <div class="field-row">
+            <label for="pricesX">X (650)</label>
+            <input type="text" name="pricesX" id="pricesX">
+          </div>
+          <div class="field-row">
+            <label for="pricesY">Y (790)</label>
+            <input type="text" name="pricesY" id="pricesY">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" hidden>
+        <button type="button" id="loadPreviewButton">Load Preview</button>
+      </div>
+    </form>
+    <div id="table-exporter" class="not_visible">
+      <div class="row">
+        <table>
+          <thead>
+            <tr>
+              <th>Products</th>
+              <th>Prices</th>
+            </tr>
+          </thead>
+          <tbody id="preview-table-body">
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <button id="export-button">Export</button>
+        <span class="success-message not_visible">File exported correctly</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
