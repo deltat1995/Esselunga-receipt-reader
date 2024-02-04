@@ -9,12 +9,12 @@ This project is written in Rust and has the following requirements:
 
 
 To run the project locally in dev mode use the command:
-```
+```bash
 cargo tauri dev
 ```
 
 To build the executable file:
-```
+```bash
 cargo tauri build
 ```
 
