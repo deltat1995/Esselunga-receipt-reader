@@ -7,16 +7,17 @@ This project is written in Rust and has the following requirements:
 - Python3 and the library PyPDF2, re, argparse
 - The script pdf_reader.py should be in the folder `etc` placed in the same folder of the executable file. Don't move the file already correctly placed in the `src-tauri` folder
 
+## Running commands
 
 To run the project locally in dev mode use the command:
 
-```
+```rust
 cargo tauri dev
 ```
 
 To build the executable file:
 
-```
+```rust
 cargo tauri build
 ```
 
